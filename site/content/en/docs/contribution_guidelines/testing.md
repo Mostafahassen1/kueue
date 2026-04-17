@@ -58,7 +58,8 @@ For running a subset of tests, see [Running subset of tests](#running-subset-of-
 make kind-image-build
 make test-e2e
 make test-tas-e2e
-make test-e2e-customconfigs
+make test-e2e-sequential-extended
+time make test-e2e-sequential-baseline
 make test-e2e-certmanager
 make test-e2e-kueueviz
 make test-multikueue-e2e
@@ -211,6 +212,24 @@ GINKGO_ARGS="--label-filter=feature:deployment" make test-e2e-helm
 GINKGO_ARGS="--label-filter=feature:jobset,feature:trainjob" make test-e2e
 ```
 
+<<<<<<< HEAD
+=======
+### Use label filters for e2e customconfigs tests
+CustomConfigs tests are labeled by feature. You can use `GINKGO_ARGS` with `--label-filter` to run specific tests:
+
+**Label Taxonomy:**
+- Features: `admissionfairsharing, certs, failurerecoverypolicy, managejobswithoutqueuename, localqueuemetrics, objectretentionpolicies, podintegrationautoenablement, reconcile, spark, visibility, waitforpodsready`
+
+**Examples:**
+```shell
+# Run only admissionfairsharing tests (Baseline)
+GINKGO_ARGS="--label-filter=feature:admissionfairsharing" make test-e2e-sequential-baseline
+
+# Run only spark tests (Extended)
+GINKGO_ARGS="--label-filter=feature:spark" make test-e2e-sequential-extended
+```
+
+>>>>>>> test: split e2e customconfigs into baseline and extended
 ### Use Ginkgo --focus arg
 ```shell
 GINKGO_ARGS="--focus=Scheduler" make test-integration
