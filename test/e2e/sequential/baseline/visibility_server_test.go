@@ -14,15 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD:test/e2e/customconfigs/visibility_server_test.go
-package customconfigse2e
-=======
-package sequentialbaseline
->>>>>>> test: split e2e customconfigs into baseline and extended:test/e2e/sequential-baseline/visibility_server_test.go
-=======
 package baseline
->>>>>>> test: split e2e customconfigs into baseline and extended
 
 import (
 	"context"

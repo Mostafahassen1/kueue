@@ -14,15 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-<<<<<<< HEAD
-<<<<<<< HEAD:test/e2e/customconfigs/managejobswithoutqueuename_test.go
-package customconfigse2e
-=======
-package sequentialextended
->>>>>>> test: split e2e customconfigs into baseline and extended:test/e2e/sequential-extended/managejobswithoutqueuename_test.go
-=======
 package extended
->>>>>>> test: split e2e customconfigs into baseline and extended
 
 import (
 	"github.com/onsi/ginkgo/v2"

@@ -212,8 +212,6 @@ GINKGO_ARGS="--label-filter=feature:deployment" make test-e2e-helm
 GINKGO_ARGS="--label-filter=feature:jobset,feature:trainjob" make test-e2e
 ```
 
-<<<<<<< HEAD
-=======
 ### Use label filters for e2e customconfigs tests
 CustomConfigs tests are labeled by feature. You can use `GINKGO_ARGS` with `--label-filter` to run specific tests:
 
@@ -229,7 +227,6 @@ GINKGO_ARGS="--label-filter=feature:admissionfairsharing" make test-e2e-sequenti
 GINKGO_ARGS="--label-filter=feature:spark" make test-e2e-sequential-extended
 ```
 
->>>>>>> test: split e2e customconfigs into baseline and extended
 ### Use Ginkgo --focus arg
 ```shell
 GINKGO_ARGS="--focus=Scheduler" make test-integration
