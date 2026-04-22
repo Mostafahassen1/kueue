@@ -216,15 +216,15 @@ GINKGO_ARGS="--label-filter=feature:jobset,feature:trainjob" make test-e2e
 CustomConfigs tests are labeled by feature. You can use `GINKGO_ARGS` with `--label-filter` to run specific tests:
 
 **Label Taxonomy:**
-- Features: `admissionfairsharing, certs, failurerecoverypolicy, managejobswithoutqueuename, localqueuemetrics, objectretentionpolicies, podintegrationautoenablement, reconcile, spark, visibility, waitforpodsready`
+- Features: `admissionfairsharing, certs, failurerecoverypolicy, managejobswithoutqueuename, objectretentionpolicies, reconcile, visibility, waitforpodsready`
 
 **Examples:**
 ```shell
 # Run only admissionfairsharing tests (Baseline)
 GINKGO_ARGS="--label-filter=feature:admissionfairsharing" make test-e2e-sequential-baseline
 
-# Run only spark tests (Extended)
-GINKGO_ARGS="--label-filter=feature:spark" make test-e2e-sequential-extended
+# Run only suite tests (Extended)
+GINKGO_ARGS="--label-filter=feature:suite" make test-e2e-sequential-extended
 ```
 
 ### Use Ginkgo --focus arg
