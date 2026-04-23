@@ -220,10 +220,10 @@ GINKGO_ARGS="--label-filter=feature:jobset,feature:trainjob" make test-e2e
 Sequential tests (Baseline and Extended) are labeled by feature. You can use `GINKGO_ARGS` with `--label-filter` to run specific tests:
 
 **Label Taxonomy (Baseline):**
-- Features: `admissionfairsharing, certs, failurerecoverypolicy, localqueuemetrics, objectretentionpolicies, podintegrationautoenablement, reconcile, visibility, waitforpodsready`
+- Features: `admissionfairsharing, certs, failurerecoverypolicy, objectretentionpolicies, podintegrationautoenablement, reconcile, visibility, waitforpodsready`
 
 **Label Taxonomy (Extended):**
-- Features: `managejobswithoutqueuename, spark`
+- Features: `managejobswithoutqueuename`
 
 **Examples:**
 ```shell
@@ -231,7 +231,7 @@ Sequential tests (Baseline and Extended) are labeled by feature. You can use `GI
 GINKGO_ARGS="--label-filter=feature:admissionfairsharing" make test-e2e-sequential-baseline
 
 # Run only suite tests (Extended)
-GINKGO_ARGS="--label-filter=feature:suite" make test-e2e-sequential-extended
+GINKGO_ARGS="--label-filter=feature:managejobswithoutqueuename" make test-e2e-sequential-extended
 ```
 
 ### Use Ginkgo --focus arg
