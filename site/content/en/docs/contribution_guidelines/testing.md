@@ -231,7 +231,7 @@ Sequential tests (Baseline and Extended) are labeled by feature. You can use `GI
 GINKGO_ARGS="--label-filter=feature:admissionfairsharing" make test-e2e-sequential-baseline
 
 # Run only suite tests (Extended)
-GINKGO_ARGS="--label-filter=feature:managejobswithoutqueuename" make test-e2e-sequential-extended
+GINKGO_ARGS="--label-filter=feature:suite" make test-e2e-sequential-extended
 ```
 
 ### Use Ginkgo --focus arg
