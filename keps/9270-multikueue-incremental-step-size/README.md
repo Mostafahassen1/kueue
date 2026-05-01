@@ -1,6 +1,6 @@
  
 # KEP-9270: MultiKueue Incremental Dispatcher Step Size
-
+<!-- toc -->
 - [Summary](#summary)
 - [Motivation](#motivation)
   - [Goals](#goals)
@@ -8,6 +8,8 @@
 - [Proposal](#proposal)
   - [Risks and Mitigations](#risks-and-mitigations)
 - [Design Details](#design-details)
+  - [API Changes](#api-changes)
+  - [Execution Loop](#execution-loop)
   - [Test Plan](#test-plan)
     - [Prerequisite testing updates](#prerequisite-testing-updates)
     - [Unit tests](#unit-tests)
@@ -16,7 +18,8 @@
   - [Graduation Criteria](#graduation-criteria)
 - [Implementation History](#implementation-history)
 - [Drawbacks](#drawbacks)
-- [Alternatives](#alternatives)
+<!-- /toc -->
+
 ## Summary
 
 This proposal introduces a new configuration field called `stepSize` to the MultiKueue Incremental Dispatcher. This setting will control the number of worker clusters that the Manager Cluster will attempt to dispatch a workload to concurrently.
