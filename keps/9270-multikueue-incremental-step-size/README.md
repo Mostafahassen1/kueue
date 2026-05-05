@@ -101,7 +101,8 @@ Standard E2E multi-cluster tests will be updated to include an iteration where `
 
 ### Graduation Criteria
 
-* **Alpha:** * API fields added.
+* **Alpha:**
+    * API fields added.
     * Workload Controller updated to support batching.
     * Unit tests and EnvTest integration tests passing.
 * **Beta:** * Gather feedback from the community.
