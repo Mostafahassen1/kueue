@@ -116,4 +116,3 @@ Standard E2E multi-cluster tests will be updated to include an iteration where `
 ## Drawbacks
 
 This adds slight code complexity to the existing Incremental Dispatcher loop and introduces one additional configuration parameter for administrators to manage and tune.
-```
