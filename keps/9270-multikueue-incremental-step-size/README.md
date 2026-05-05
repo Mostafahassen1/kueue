@@ -88,8 +88,8 @@ No major prerequisite testing updates are required. Current mock worker cluster 
 
 #### Unit tests
 
-- `pkg/controller/core/workload_controller_test.go`: `<date>` - Verify that the worker cluster list is correctly divided into chunks matching the `stepSize`.
-- `pkg/controller/core/workload_controller_test.go`: `<date>` - Verify that the default value remains `1` if the user does not specify a `stepSize`.
+- `pkg/controller/core/workload_controller_test.go`: Verify that the worker cluster list is correctly divided into chunks matching the `stepSize`.
+- `pkg/controller/core/workload_controller_test.go`: Verify that the default value remains `1` if the user does not specify a `stepSize`.
 
 #### Integration tests
 
