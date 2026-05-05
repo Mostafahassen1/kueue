@@ -46,9 +46,9 @@ We propose updating the `MultiKueueConfig` API to accept an optional integer for
 
 ### Risks and Mitigations
 
-**Risk:**An administrator might set the `stepSize` to an extremely high number (e.g., equal to the total number of clusters), which effectively recreates the heavy load issues of the `AllAtOnce` dispatcher and increases the chance of race conditions where multiple clusters admit the job at the exact same time.
+**Risk:** An administrator might set the `stepSize` to an extremely high number (e.g., equal to the total number of clusters), which effectively recreates the heavy load issues of the `AllAtOnce` dispatcher and increases the chance of race conditions where multiple clusters admit the job at the exact same time.
 
-Mitigation: Provide clear API documentation regarding best practices. The Workload Controller's conflict resolution logic will naturally handle race conditions, just as it already does for the `AllAtOnce` strategy.
+**Mitigation:** Provide clear API documentation regarding best practices. The Workload Controller's conflict resolution logic will naturally handle race conditions, just as it already does for the `AllAtOnce` strategy.
 
 ## Design Details
 
@@ -69,6 +69,7 @@ type MultiKueue struct {
     // IncrementalDispatcherStepSize defines the number of worker clusters the Incremental 
     // Dispatcher will query simultaneously. 
     // This field is only valid when DispatcherName is set to the incremental dispatcher.
+	// Note: This field is going to be ignored when the MultiKueueStepSize feature gate is disabled.
     // Minimum value is 1. If not set, it defaults to 3.
     // +optional
     // +kubebuilder:default=3
