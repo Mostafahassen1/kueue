@@ -58,7 +58,7 @@ We will update the global `Configuration` API (specifically the `MultiKueue` str
 
 The field will be named `IncrementalDispatcherStepSize` for clarity. To ensure backwards compatibility and preserve existing system behavior, the default value will be `3`.
 
-We will also use Kubebuilder validation markers (e.g., `CEL` rules or `+union` discriminators depending on the struct setup) to enforce that this field can only be populated if `DispatcherName` is set to the incremental dispatcher.
+We will also use Kubebuilder validation markers (e.g., CEL rules) to enforce that this field can only be populated if DispatcherName is set to the incremental dispatcher.
 
 ```go
 type MultiKueue struct {
